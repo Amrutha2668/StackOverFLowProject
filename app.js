@@ -3,6 +3,7 @@ const path = require("path");
 const app = express();
 const User = require("./js/Model");
 const QuestionModel = require("./js/QuestionModel");
+const AnswersModel = require("./js/AnswerModel");
 const sequelize = require("./database/database");
 const { Op } = require("sequelize");
 
