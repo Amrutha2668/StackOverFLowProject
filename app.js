@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get("/signup", (req, res) => {
   //sending a whole html file here
-  res.sendFile(path.join(__dirname, "main.html"));
+  res.sendFile(path.join(__dirname, "./public/main.html"));
 });
 
 //if data is submitted we are giving post method then
