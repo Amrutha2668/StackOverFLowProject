@@ -43,6 +43,7 @@ app.post("/signUp", function (req, res) {
 
     // If email is not present then update to table
     if (entryCount == 0) {
+      if(apiResponse.psw == apiResponse.pswRepeat){
       User.create({
         Email: apiResponse.email,
         Name: apiResponse.name,
@@ -51,6 +52,10 @@ app.post("/signUp", function (req, res) {
       });
       console.log("Records Updated!!");
       res.send("account created");
+    }
+    else{
+      res.send("Password don't match");
+    }
     } else {
       res.send("You're already registered!! Please login");
       res.sendFile(path.join(__dirname, "/template/main.html"));
