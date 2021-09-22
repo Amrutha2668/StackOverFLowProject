@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get("/signUp", (req, res) => {
   //sending a whole html file to browser
-  res.sendFile(path.join(__dirname, "./public/main.html"));
+  res.sendFile(path.join(__dirname, "./templates/main.html"));
 });
 
 //if data is submitted we are giving post method then
@@ -31,20 +31,19 @@ app.post("/signUp", function (req, res) {
       Password: apiResponse.psw,
       Gender: apiResponse.gender,
     });
+    User.create({
+      Email: apiResponse.email,
+      Name: apiResponse.name,
+      Password: apiResponse.psw,
+      Gender: apiResponse.gender,
+    });
+    console.log("Records Updated!!");
     res.send("account created");
   } else {
     res.send("Password Doesn't match");
   }
+})
 
-  // Pushing the user i/p data to table in Db.
-  User.create({
-    Email: apiResponse.email,
-    Name: apiResponse.name,
-    Password: apiResponse.psw,
-    Gender: apiResponse.gender,
-  });
-  console.log("Records Updated!!");
-});
 
 createTable();
 
