@@ -1,65 +1,68 @@
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
-
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
 
 .topnav {
-    display: flex;
-    overflow: hidden;
-    background-color: #e9e9e9;
-  }
-  
-  .topnav a {
-    float: left;
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  .topnav a:hover {
-    background-color: black;
-    color: white;
-  }
-  
-  .topnav a.active {
-    background-color: #151616;
-    color: white;
-  }
+  display: flex;
+  overflow: hidden;
+  background-color: #7583d3;
+}
 
-  .topnav a .active:hover {
-      background-color: rgb(87, 69, 69);
-  }
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
 
-  .topnav .search-container{
-    width: 1000px;
-    margin-left: 100px;
-  }
-  .topnav .search-container input[type=text] {
-    padding: 6px;
-    margin-top: 8px;
-    font-size: 17px;
-    border: none;
-  }
-  
-  .topnav .search-container button {
-    padding: 6px;
-    margin-top: 8px;
-    margin-right: 16px;
-    background: #ddd;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .topnav .search-container button:hover {
-    background: #ccc;
-  }
+.topnav a:hover {
+  background-color: black;
+  color: white;
+}
+
+.topnav a.active {
+  background-color: #151616;
+  color: white;
+}
+
+.topnav a .active:hover {
+  background-color: rgb(87, 69, 69);
+}
+
+.topnav .search-container {
+  width: 1000px;
+  margin-left: 100px;
+}
+.topnav .search-container input[type="text"] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
 /* Full-width input fields */
 .topnav .userBtn {
-    margin-left: 200px;
-    width: 200px;
+  margin-left: 200px;
+  width: 200px;
 }
 
 /*.topnav .userBtn .logBtn{
@@ -69,7 +72,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
     width: 50px
 }*/
 
-.topnav .modal input[type=text], input[type=password] {
+.topnav .modal input[type="text"],
+input[type="password"] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -79,7 +83,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 /* Add a background color when the inputs get focus */
-.topnav .modal input[type=text]:focus, input[type=password]:focus {
+.topnav .modal input[type="text"]:focus,
+input[type="password"]:focus {
   background-color: #ddd;
   outline: none;
 }
@@ -88,7 +93,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 .topnav .userBtn button {
   background-color: black;
   color: white;
- padding: 14px 20px;
+  padding: 14px 20px;
   margin: auto;
   border: none;
   cursor: pointer;
@@ -97,7 +102,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 .topnav .modal button:hover {
-  opacity:1;
+  opacity: 1;
 }
 
 /* Extra styles for the cancel button */
@@ -107,7 +112,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 /* Float cancel and signup buttons and add an equal width */
-.topnav .modal .cancelbtn, .topnav .modal .signupbtn {
+.topnav .modal .cancelbtn,
+.topnav .modal .signupbtn {
   float: left;
   width: 50%;
 }
@@ -144,7 +150,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
 }
- 
+
 /* The Close Button (x) */
 .topnav .modal .close {
   position: absolute;
@@ -168,107 +174,178 @@ body {font-family: Arial, Helvetica, sans-serif;}
   display: table;
 }
 
-.qstnArea .qstnBtn {
-    background-color: black;
-    color: white;
-    width: 300px;
-    height: 60px;
-    align-items: center;
+
+/*----------------------------Top Questions------------------------------*/
+
+.topQuestions {
+  width:100%;
+  height: 800pxpx;
+  background-color: black;
+  opacity: 0.9;
 }
 
-.qstnArea .modal input[type=text]{
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-  }
+.topQuestions .showQstn {
+  width:75%;
+  margin: 0 auto;
+  height: 800px;
+  background-color: white;
+}
+
+.topQuestions .showQstn .showHead {
+  width:75%;
+  height: 80px;
+  padding-left: 15px;
+  display: flex ;
+}
+
+.topQuestions .showQstn .showHead .qstnArea{
+  background-color: wheat;
+  margin-left: 600px;
+  margin-top: 10px;
+  height: 50px;
+  width: 150px;
+}
+/*------------------------------------------------------------------------*/
+
+
+.qstnArea button {
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: auto;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.qstnArea .qstnBtn {
+  background-color: rgb(33, 33, 49);
+  color: white;
+  width: 150px;
+  height: 50px;
+  align-items: center;
+}
+
+.qstnArea .modal input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
 
 .qstnArea .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: #474e5d;
-    padding-top: 50px;
-  }
-  
-.qstnArea .modal .cancelbtn {
-    padding: 14px 20px;
-    background-color: rgb(53, 51, 51);
-  }
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
 
-.qstnArea .modal .cancelbtn, .qstnArea .modal .submitBtn {
-    float: left;
-    width: 50%;
-  }
+.qstnArea textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+
+.qstnArea .modal .cancelbtn {
+  padding: 14px 20px;
+  background-color: rgb(53, 51, 51);
+}
+
+.qstnArea .modal .cancelbtn,
+.qstnArea .modal .submitBtn {
+  float: left;
+  width: 50%;
+}
 
 .qstnArea .modal .container {
-    padding: 16px;
-  }
+  padding: 16px;
+}
 
-  /* Modal Content/Box */
+/* Modal Content/Box */
 .qstnArea .modal .modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
-  
-  /* Style the horizontal ruler */
-  .qstnArea .modal hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
-  }
-   
-  /* The Close Button (x) */
-  .qstnArea .modal .close {
-    position: absolute;
-    right: 35px;
-    top: 15px;
-    font-size: 40px;
-    font-weight: bold;
-    color: #f1f1f1;
-  }
-  
-  .qstnArea .modal.close:hover,
-  .close:focus {
-    color: #f44336;
-    cursor: pointer;
-  }
-  
-  /* Clear floats */
-  .qstnArea .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+.qstnArea .modal hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* The Close Button (x) */
+.qstnArea .modal .close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.qstnArea .modal.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.qstnArea .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.footer {
+  /*position: fixed;*/
+  width: 100%;
+  height: 100px;
+  background-color: rgb(31, 14, 14);
+  color: white;
+  text-align: center;
+}
+
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
-    .topnav .modal .cancelbtn, .topnav .modal .signupbtn{
-     width: 100%;
+  .topnav .modal .cancelbtn,
+  .topnav .modal .signupbtn {
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 600px) {
-    .topnav .search-container {
-      float: none;
-    }
-    .topnav a, .topnav .search-container input[type=text], .topnav .search-container button {
-      float: none;
-      display: block;
-      text-align: left;
-      width: 100%;
-      margin: 0;
-      padding: 14px;
-    }
-    .topnav .search-container input[type=text] {
-      border: 1px solid #ccc;  
-    }
+  .topnav .search-container {
+    float: none;
   }
+  .topnav a,
+  .topnav .search-container input[type="text"],
+  .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav .search-container input[type="text"] {
+    border: 1px solid #ccc;
+  }
+}
