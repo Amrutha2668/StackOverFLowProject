@@ -40,15 +40,24 @@ app.post("/signUp", function (req, res) {
     console.log("Records Updated!!");
     res.send("account created");
   } else {
-    res.send("Password Doesn't match");
+    res.send("Password don't match");
+    res.sendFile(path.join(__dirname, "/template/main.html"));;
   }
 })
 
-
-createTable();
+// /postQuestion
+createUserTable();
+createQuestionTable();
 
 // Table creation in db if table does not exists.
-async function createTable() {
+async function createUserTable() {
+  await sequelize
+    .sync()
+    .then(console.log("Hello"))
+    .catch((err) => console.log(err));
+}
+
+async function createQuestionTable() {
   await sequelize
     .sync()
     .then(console.log("Hello"))
