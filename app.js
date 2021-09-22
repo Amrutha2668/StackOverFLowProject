@@ -1,8 +1,11 @@
 const express = require("express");
 const path = require("path");
 const app = express();
+const User = require("./js/Model");
+const sequelize = require("./database/database");
 
-app.use("/static",express.static('static'))
+// Fetching and rendering the data
+app.use("/static", express.static("static"));
 
 app.listen(3007, function () {
   console.log("server has started");
@@ -20,7 +23,32 @@ app.get("/signup", (req, res) => {
 app.post("/signup", function (req, res) {
   apiResponse = req.body;
   console.log(apiResponse);
-  console.log(apiResponse.first);
-  console.log(apiResponse.second);
-  res.send("account created");
+  let records = [];
+  if (apiResponse.psw == apiResponse.pswRepeat) {
+    records.push({
+      Email: apiResponse.email,
+      Name: apiResponse.name,
+      Password: apiResponse.psw,
+      Gender: apiResponse.gender,
+    })
+    res.send("account created");
+  } else {
+    res.send("Password Doesn't match");
+  }
+  User.create({
+    Email: apiResponse.email,
+    Name: apiResponse.name,
+    Password: apiResponse.psw,
+    Gender: apiResponse.gender,
+  })
+  console.log("Records Updated!!");
 });
+
+createTable();
+
+async function createTable() {
+  await sequelize
+    .sync()
+    .then(console.log("Hello"))
+    .catch((err) => console.log(err));
+}

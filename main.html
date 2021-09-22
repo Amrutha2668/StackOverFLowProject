@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AskInfinite</title>
+    <title>StackOverFlowClone</title>
     <link href="./static/StyleRegistration.css" rel="stylesheet" />
   </head>
 
@@ -36,10 +36,10 @@
             title="Close Modal"
             >&times;</span
           >
-          <form class="modal-content" action="/action_page.php">
+          <form class="modal-content" action="/login" method="POST">
             <div class="container">
               <h1>Log In</h1>
-              <p>Please fill in this form to open an account.</p>
+              <p>Please enter credentials.</p>
               <hr />
 
               <label for="email"><b>Email</b></label>
@@ -87,7 +87,7 @@
             title="Close Modal"
             >&times;</span
           >
-          <form class="modal-content" action="/action_page.php">
+          <form class="modal-content" action="/signup" method="POST">
             <div class="container">
               <h1>Sign Up</h1>
               <p>Please fill in this form to create an account.</p>
@@ -116,11 +116,11 @@
                 required
               />
 
-              <label for="psw-repeat"><b>Repeat Password</b></label>
+              <label for="pswRepeat"><b>Repeat Password</b></label>
               <input
                 type="password"
                 placeholder="Repeat Password"
-                name="psw-repeat"
+                name="pswRepeat"
                 required
               />
 
