@@ -16,6 +16,7 @@ app.listen(3007, function () {
 //middleware functions execute during lifecycle of a request to the express server  EG:USE
 app.use(express.urlencoded({ extended: true }));
 
+// SignUp part
 app.get("/signUp", (req, res) => {
   //sending a whole html file to browser
   res.sendFile(path.join(__dirname, "./templates/main.html"));
@@ -26,21 +27,21 @@ let email;
 //if data is submitted we are giving post method then
 app.post("/signUp", function (req, res) {
   apiResponse = req.body;
+  // console.log(apiResponse);
 
-  // just for checking purpose
-  console.log(apiResponse);
   // Updating the db upon ensuring the uniqueness.
   checkUniqueness();
 
+  // Check if the entered email is already present
   async function checkUniqueness() {
-    const count3 = await User.count({
+    const entryCount = await User.count({
       where: {
-        Email : apiResponse.email,
-      }
+        Email: apiResponse.email,
+      },
     });
-    console.log(count3);
-    // checking if passwords are same.
-    if (count3 == 0) {
+
+    // If email is not present then update to table
+    if (entryCount == 0) {
       User.create({
         Email: apiResponse.email,
         Name: apiResponse.name,
@@ -56,16 +57,20 @@ app.post("/signUp", function (req, res) {
   }
 });
 
+// Login part
 app.get("/login", (req, res) => {
   //sending a whole html file to browser
   res.sendFile(path.join(__dirname, "./templates/main.html"));
 });
+
 app.post("/login", function (req, res) {
   apiResponse = req.body;
   console.log(apiResponse.psw);
   console.log(apiResponse.email);
+  email = apiResponse.email;
   loginPage();
 
+  // Check if email and password matches.
   async function loginPage() {
     count2 = await User.count({
       where: {
@@ -75,14 +80,17 @@ app.post("/login", function (req, res) {
         ],
       },
     });
-    console.log(count2);
+
+    // if count is 1 then login successful
     if (count2 == 1) res.send("hey user successfully logged in");
+    // If not redirect them to login page again!
     else {
       res.send("cannot login");
     }
   }
 });
 
+// Question part
 app.get("/postQuestion", (req, res) => {
   //sending a whole html file to browser
   res.sendFile(path.join(__dirname, "./templates/main.html"));
