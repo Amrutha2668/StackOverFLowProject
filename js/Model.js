@@ -9,6 +9,5 @@ const User = sequelize.define("User", {
    Password : Sequelize.DataTypes.TEXT,
    Gender : Sequelize.DataTypes.TEXT,
 });
-
 // eslint-disable-next-line no-undef
 module.exports = User;
