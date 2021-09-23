@@ -55,7 +55,7 @@ app.post("/signUp", function (req, res) {
           Gender: apiResponse.gender,
         });
         console.log("Records Updated!!");
-        res.send("account created");
+        res.sendFile(path.join(__dirname, "./templates/login.html"))
       } else {
         // res.send("Password don't match");
         res.sendFile(path.join(__dirname, "./templates/signUp.html"));
@@ -93,7 +93,7 @@ app.post("/login", function (req, res) {
 
     // if count is 1 then login successful
     if (count2 == 1) {
-      res.sendFile(path.join(__dirname, "./templates/home.html"));
+      res.sendFile(path.join(__dirname, "./templates/main.html"));
       // res.send("hey user successfully logged in");
     }
     // If not redirect them to login page again!
@@ -106,7 +106,7 @@ app.post("/login", function (req, res) {
 // Question part
 app.get("/postQuestion", (req, res) => {
   //sending a whole html file to browser
-  res.sendFile(path.join(__dirname, "./templates/Questions.html"));
+  res.sendFile(path.join(__dirname, "./templates/question.html"));
 });
 
 app.post("/postQuestion", function (req, res) {
@@ -119,7 +119,7 @@ app.post("/postQuestion", function (req, res) {
   });
   console.log("Question Updated!!");
   // res.send("Question Posted");
-  res.sendFile(path.join(__dirname, "./templates/home.html"));
+  res.sendFile(path.join(__dirname, "./templates/main.html"));
 });
 
 createTable();
@@ -131,3 +131,37 @@ async function createTable() {
     .then(console.log("Hello"))
     .catch((err) => console.log(err));
 }
+
+// about part
+app.get("/about", (req, res) => {
+  //sending a whole html file to browser
+  res.sendFile(path.join(__dirname, "./templates/about.html"));
+});
+
+// search part
+app.get("/search", (req, res) => {
+  //sending a whole html file to browser
+  res.sendFile(path.join(__dirname, "./templates/main.html"));
+});
+
+app.post("/search", function (req, res) {
+  apiResponse = req.body;
+  console.log(apiResponse);
+  const searchString = apiResponse.search; 
+  console.log(apiResponse.search);
+  const fetchedResult = fetchQuestionAndAnswer();
+  function fetchQuestionAndAnswer() {
+    const result = QuestionModel.findAll({
+      where: {
+        ["Question"]: {
+          [Op.like]: `%${searchString}%` ,
+        },
+     }
+    })
+    console.log(result)
+    return result;
+  }
+  console.log(fetchedResult);
+  // res.send("Question Posted");
+  res.sendFile(path.join(__dirname, "./templates/main.html"));
+});

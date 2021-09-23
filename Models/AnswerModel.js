@@ -3,7 +3,8 @@ const sequelize = require("../database/database");
 
 
 const Answers = sequelize.define("Answers", {
-    Answers : Sequelize.DataTypes.BLOB,
+    QuestionId : Sequelize.DataTypes.CHAR(255),
+    Answer : Sequelize.DataTypes.CHAR(255),
     Email : Sequelize.DataTypes.TEXT,
  });
 

@@ -163,6 +163,30 @@ body {
 /*------------------------------------------------------------------------*/
 
 
+.topQuestions .showQstn {
+  width:75%;
+  margin: 0 auto;
+  height: 800px;
+  background-color: white;
+}
+
+.topQuestions .showQstn .showHead {
+  width:75%;
+  height: 80px;
+  padding-left: 15px;
+  display: flex ;
+}
+
+.topQuestions .showQstn .showHead .qstnArea{
+  background-color: wheat;
+  margin-left: 600px;
+  margin-top: 10px;
+  height: 50px;
+  width: 150px;
+}
+/*------------------------------------------------------------------------*/
+
+
 .qstnArea button {
   background-color: black;
   color: white;
