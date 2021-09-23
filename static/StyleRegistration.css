@@ -292,19 +292,6 @@ body {
   display: table;
 }
 
-<<<<<<< HEAD:static/StyleRegistration.css
-
-.footer {
-  /*position: fixed;*/
-  width: 100%;
-  height: 100px;
-  background-color: rgb(31, 14, 14);
-  color: white;
-  text-align: center;
-}
-
-||||||| 72226bd:StyleRegistration.css
-=======
 
 .footer {
   /*position: fixed;*/
@@ -315,7 +302,6 @@ body {
   text-align: center;
 }
 
->>>>>>> 646eb4ead6fec55961bb1912b18920346f4a2434:StyleRegistration.css
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
   .topnav .modal .cancelbtn,
