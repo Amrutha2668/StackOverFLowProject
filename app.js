@@ -93,7 +93,7 @@ app.post("/login", function (req, res) {
 
     // if count is 1 then login successful
     if (count2 == 1) {
-      res.sendFile(path.join(__dirname, "/template/home.html"));
+      res.sendFile(path.join(__dirname, "/template/main.html"));
       // res.send("hey user successfully logged in");
     }
     // If not redirect them to login page again!
@@ -119,7 +119,7 @@ app.post("/postQuestion", function (req, res) {
   });
   console.log("Question Updated!!");
   // res.send("Question Posted");
-  res.sendFile(path.join(__dirname, "/template/home.html"));
+  res.sendFile(path.join(__dirname, "/template/main.html"));
 });
 
 createTable();
