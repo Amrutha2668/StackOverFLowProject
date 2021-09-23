@@ -153,32 +153,12 @@ body {
   display: flex ;
 }
 
-<<<<<<< HEAD:static/StyleRegistration.css
-
-/*----------------------------Top Questions------------------------------*/
-
-.topQuestions {
-  width:100%;
-  height: 800pxpx;
-  background-color: black;
-  opacity: 0.9;
-||||||| 72226bd:StyleRegistration.css
-.qstnArea {
-  background-color:#888;
-  height: 650px;
-  padding-top: 100px;
-  padding-left: 610px;
-  background-image: url("questions-answers.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-=======
 .topQuestions .showQstn .showHead .qstnArea{
   background-color: wheat;
   margin-left: 600px;
   margin-top: 10px;
   height: 50px;
   width: 150px;
->>>>>>> 646eb4ead6fec55961bb1912b18920346f4a2434:StyleRegistration.css
 }
 /*------------------------------------------------------------------------*/
 
@@ -219,13 +199,7 @@ body {
 }
 
 .qstnArea .qstnBtn {
-<<<<<<< HEAD:static/StyleRegistration.css
   background-color: rgb(33, 33, 49);
-||||||| 72226bd:StyleRegistration.css
-  background-color: rgb(82, 82, 185);
-=======
-  background-color: blue;
->>>>>>> 646eb4ead6fec55961bb1912b18920346f4a2434:StyleRegistration.css
   color: white;
   width: 150px;
   height: 50px;
@@ -318,19 +292,6 @@ body {
   display: table;
 }
 
-<<<<<<< HEAD:static/StyleRegistration.css
-
-.footer {
-  /*position: fixed;*/
-  width: 100%;
-  height: 100px;
-  background-color: rgb(31, 14, 14);
-  color: white;
-  text-align: center;
-}
-
-||||||| 72226bd:StyleRegistration.css
-=======
 
 .footer {
   /*position: fixed;*/
@@ -341,7 +302,6 @@ body {
   text-align: center;
 }
 
->>>>>>> 646eb4ead6fec55961bb1912b18920346f4a2434:StyleRegistration.css
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
   .topnav .modal .cancelbtn,
