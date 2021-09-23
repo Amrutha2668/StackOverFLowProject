@@ -27,3 +27,4 @@
    1. Fetching the provided field from the browser.
    2. Update the table with the fetched table.
    3. Redirect to home, along with fetching the updated question to the home page.
+7. For Merge conflict.
