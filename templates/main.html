@@ -1,83 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StackOverFlowClone</title>
-    <link href="./static/StyleRegistration.css" rel="stylesheet" />
-  </head>
 
-  <body>
-    <div class="topnav">
-      <a class="active" href="home">Home</a>
-      <a href="/About">About</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StackOverFlowClone</title>
+  <link href="./static/StyleRegistration.css" rel="stylesheet" />
+</head>
 
-      <div class="search-container">
-        <form action="/search" method="POST">
-          <input type="text" placeholder="Search.." name="search" />
-          <button type="submit">Submit</button>
-        </form>
-      </div>
+<body>
+  <div class="topnav">
+    <a class="active" href="home">Home</a>
+    <a href="/About">About</a>
 
-      <div class="userBtn">
-        <a href="/login">Log In</a>
-        <a href="/signUp">Sign Up</a>
-      </div>
-
-    </div>
-        
-
-    <div class="qstnArea">
-      <button
-        class="qstnBtn"
-        onclick="document.getElementById('id03').style.display='block'"
-      >
-        Ask
-      </button>
-
-      <div id="id03" class="modal">
-        <span
-          onclick="document.getElementById('id03').style.display='none'"
-          class="close"
-          title="Close Modal"
-          >&times;</span
-        >
-        <form class="modal-content" action="/postQuestion" method="POST">
-          <div class="container">
-            <h1>Upload Question</h1>
-            <hr />
-            <p>Subject <input type="text" name="T1" /></p>
-            <p>Question <textarea name="T2" rows="5" cols="60"></textarea></p>
-            <br />
-            <div class="clearfix">
-              <button
-                type="button"
-                onclick="document.getElementById('id03').style.display='none'"
-                class="cancelbtn"
-              >
-                Cancel
-              </button>
-              <button type="submit" class="submitBtn">Upload</button>
-            </div>
-          </div>
-        </form>
-      </div>
+    <div class="search-container">
+      <form action="/search" method="POST">
+        <input type="text" placeholder="Search.." name="search" />
+        <button type="submit">Submit</button>
+      </form>
     </div>
 
-    <div class="footer">
-      Footer
+    <div class="userBtn">
+      <a href="/login">Log In</a>
+      <a href="/signUp">Sign Up</a>
     </div>
-    <script>
 
-      var modal3 = document.getElementById("id03");
+  </div>
 
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function (event) {
-        if (event.target == modal3) {
-          modal3.style.display = "none";
-        }
-      };
-    </script>
-  </body>
+  <div class="topQuestions">
+    <div class="showQstn">
+      <div class="showHead">
+        <h2>Questions</h2>
+          <a href="/question" class="qstnBtn">
+            Ask Question
+          </a>
+      </div>
+      <div class="Section">
+        <div class="votes"> 0<br>votes</div>
+        <div class="qstnAns">
+          <a>What do you understand by Java virtual machine?</a>
+          <p>Java Virtual Machine is a virtual machine that enables the computer to run the Java program.
+             JVM acts like a run-time engine which calls the main method present in the Java code. 
+             JVM is the specification which must be implemented in the computer system.</p>
+        </div>
+      </div>
+      <div class="Section">
+        <div class="votes">0<br>votes</div>
+        <div class="qstnAns"><a>What do you understand by Java virtual machine?</a>
+          <p>Java Virtual Machine is a virtual machine that enables the computer to run the Java program.
+             JVM acts like a run-time engine which calls the main method present in the Java code. 
+             JVM is the specification which must be implemented in the computer system.</p></div>
+      </div>
+      <div class="Section">
+        <div class="votes">0<br>votes</div>
+        <div class="qstnAns"><a>What do you understand by Java virtual machine?</a>
+          <p>Java Virtual Machine is a virtual machine that enables the computer to run the Java program.
+             JVM acts like a run-time engine which calls the main method present in the Java code. 
+             JVM is the specification which must be implemented in the computer system.</p></div>
+      </div>
+      <div class="Section">
+        <div class="votes">0<br>votes</div>
+        <div class="qstnAns"><a>What do you understand by Java virtual machine?</a>
+          <p>Java Virtual Machine is a virtual machine that enables the computer to run the Java program.
+             JVM acts like a run-time engine which calls the main method present in the Java code. 
+             JVM is the specification which must be implemented in the computer system.</p></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <br>
+    <div class="box">
+      <br>
+      <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AskInfinite</h3>
+      <ul style="list-style-type:none;">
+        <li>Questions</li><br>
+        <li>Jobs</li><br>
+        <li>Developer Jobs Directory</li><br>
+        <li>Help</li><br>
+        <li>Mobile</li><br>
+      </ul>
+    </div>
+    <div class="box">
+      <br>
+      <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Products</h3>
+      <ul style="list-style-type:none;">
+        <li>Teams</li><br>
+        <li>Talent</li><br>
+        <li>Advertising</li><br>
+        <li>Enterprise</li><br>
+      </ul>
+    </div>
+    <div class="box">
+      <br>
+      <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Company</h3>
+      <ul style="list-style-type:none;">
+        <li>About</li><br>
+        <li>Privacy Policy</li><br>
+        <li>Terms of Service</li><br>
+        <li>Contact Us</li><br>
+        <li>Cookie Settings</li><br>
+      </ul>
+    </div>
+    <div class="box">
+      <br>
+      <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Networks</h3>
+      <ul style="list-style-type:none;">
+        <li>Technology</li><br>
+        <li>Life/Arts</li><br>
+        <li>Science</li><br>
+        <li>Other</li><br>
+        <li>&#169;2021 stack exchange</li><br>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+  </script>
+</body>
+
 </html>

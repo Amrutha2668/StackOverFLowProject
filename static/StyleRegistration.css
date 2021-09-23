@@ -80,7 +80,7 @@ body {
 
 .topQuestions {
   width:100%;
-  height: 800pxpx;
+  height: 750pxpx;
   background-color: white;
   opacity: 0.9;
 }
@@ -88,7 +88,7 @@ body {
 .topQuestions .showQstn {
   width:75%;
   margin: 0 auto;
-  height: 800px;
+  height: 750px;
   background-color: white;
 }
 
@@ -100,12 +100,23 @@ body {
   display: flex ;
 }
 
-.topQuestions .showQstn .showHead .qstnArea{
+/*.topQuestions .showQstn .showHead .qstnArea{
   background-color: wheat;
-  margin-left: 800px;
-  /*margin-top: 10px;*/
+  
   height: 50px;
   width: 150px;
+}*/
+
+.topQuestions .showQstn .showHead a {
+  background-color: rgb(40, 40, 216);
+  color: white;
+  margin-left: 800px;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
 .topQuestions .showQstn .Section {
@@ -119,7 +130,7 @@ body {
   height: 150px;
   background-color: wheat;
   text-align: center;
-  padding: 10px;
+  padding-top: 40px;
   font-size: large;
   font-style: bold;
 }
@@ -139,169 +150,33 @@ body {
 /*------------------------------------------------------------------------*/
 
 
-.topQuestions .showQstn {
-  width:75%;
-  margin: 0 auto;
-  height: 800px;
-  background-color: white;
-}
-
-.topQuestions .showQstn .showHead {
-  width:75%;
-  height: 80px;
-  padding-left: 15px;
-  display: flex ;
-}
-
-.topQuestions .showQstn .showHead .qstnArea{
-  background-color: wheat;
-  margin-left: 600px;
-  margin-top: 10px;
-  height: 50px;
-  width: 150px;
-}
-/*------------------------------------------------------------------------*/
-
-
-.topQuestions .showQstn {
-  width:75%;
-  margin: 0 auto;
-  height: 800px;
-  background-color: white;
-}
-
-.topQuestions .showQstn .showHead {
-  width:75%;
-  height: 80px;
-  padding-left: 15px;
-  display: flex ;
-}
-
-.topQuestions .showQstn .showHead .qstnArea{
-  background-color: wheat;
-  margin-left: 600px;
-  margin-top: 10px;
-  height: 50px;
-  width: 150px;
-}
-/*------------------------------------------------------------------------*/
-
-
-.qstnArea button {
-  background-color: black;
-  color: white;
-  padding: 14px 20px;
-  margin: auto;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-.qstnArea .qstnBtn {
-  background-color: blue;
-  color: white;
-  width: 150px;
-  height: 50px;
-  align-items: center;
-}
-
-.qstnArea .modal input[type="text"] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-
-.qstnArea .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: #474e5d;
-  padding-top: 50px;
-}
-
-.qstnArea textarea {
-  width: 100%;
-  height: 150px;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  background-color: #f8f8f8;
-  font-size: 16px;
-  resize: none;
-}
-
-.qstnArea .modal .cancelbtn {
-  padding: 14px 20px;
-  background-color: rgb(53, 51, 51);
-}
-
-.qstnArea .modal .cancelbtn,
-.qstnArea .modal .submitBtn {
-  float: left;
-  width: 50%;
-}
-
-.qstnArea .modal .container {
-  padding: 16px;
-}
-
-/* Modal Content/Box */
-.qstnArea .modal .modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* Style the horizontal ruler */
-.qstnArea .modal hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-
-/* The Close Button (x) */
-.qstnArea .modal .close {
-  position: absolute;
-  right: 35px;
-  top: 15px;
-  font-size: 40px;
-  font-weight: bold;
-  color: #f1f1f1;
-}
-
-.qstnArea .modal.close:hover,
-.close:focus {
-  color: #f44336;
-  cursor: pointer;
-}
-
-/* Clear floats */
-.qstnArea .clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
 
 
 .footer {
-  /*position: fixed;*/
   width: 100%;
-  height: 200px;
-  background-color: rgb(14, 14, 31);
+  height: 250px;
+  left: 0;
+  bottom: 0;
+  /*position: fixed;*/
+  background-color: rgb(49, 49, 51);
   color: white;
-  text-align: center;
+  display: flex;
 }
 
+.footer .box{
+  width: 300px;
+  height: 250px;
+  margin-left:50px;
+  /*background-color: rgb(27, 29, 29);*/
+  text-align: justify;
+}
+
+.footer .box ul{
+  text-decoration: none;
+  text-align: justify;
+  font-size: small;
+  color: lightgray;
+}
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
   .topnav .modal .cancelbtn,

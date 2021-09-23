@@ -36,7 +36,7 @@ input[type="password"]:focus {
 }
 
 /* Set a style for all buttons */
-.modal button {
+/*.modal button {
   color: white;
   padding: 14px 20px;
   margin: auto;
@@ -48,7 +48,7 @@ input[type="password"]:focus {
 
 .modal button:hover {
   opacity: 1;
-}
+}*/
 
 .modal .loginBtn {
   background-color: #4f4f52;
@@ -84,11 +84,4 @@ input[type="password"]:focus {
 .modal hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
-}
-
-/* Clear floats */
-.modal .clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
 }

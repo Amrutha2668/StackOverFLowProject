@@ -23,10 +23,10 @@
                 <input type="text" placeholder="Enter Email" name="email" required />
 
                 <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required />
+                <input  class = "password" type="password" placeholder="Enter Password" name="psw" required />
 
                 <label for="pswRepeat"><b>Repeat Password</b></label>
-                <input type="password" placeholder="Repeat Password" name="pswRepeat" required />
+                <input class = "confirmPassword" type="password" placeholder="Repeat Password" name="pswRepeat" required />
 
                 <label for="gender"><b>Gender</b></label><br />
                 <input type="radio" name="gender" />
@@ -48,9 +48,26 @@
             <div class="container signin">
                 <p>Already have an account? <a href="#">Sign in</a>.</p>
             </div>
+        </form>
     </div>
-    </form>
-    </div>
+
+    <script>
+        document.querySelector('.registerbtn').onclick = function(){
+
+            var password = document.querySelector('.password').value,
+                confirmPassword = document.querySelector('.confirmPassword').value;
+
+            if(password == ""){
+                alert("Field cannot be empty");
+            }
+            else if(password != confirmPassword){
+                alert("Password didn't match try again");
+            }
+            else if(password == confirmPassword){
+                alert("Password matched");
+            }
+        }
+    </script>
 </body>
 
 </html>
