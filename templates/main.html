@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AskInfinite</title>
+    <link href="/static/StyleRegistration.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="topnav">
+      <a class="active" href="#home">Home</a>
+      <a href="/templates/About.html">About</a>
+
+      <div class="search-container">
+        <form action="" method = "post">
+          <input type="text" placeholder="Search.." name="search" />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <div class="userBtn">
+        <button
+          class="logBtn"
+          onclick="document.getElementById('id02').style.display='block'"
+          style="width: auto"
+        >
+        <a href = "login.html">Log In</a>
+        </button>
+
+        
+        <button
+          class="logBtn"
+          onclick="document.getElementById('id01').style.display='block'"
+          style="width: auto"
+        >
+        <a href = "signup.html">Sign Up</a>
+        </button>
+
+      </div>
+    </div>
+
+    <div class="topQuestions">
+      <div class="showQstn">
+        <div class="showHead">
+          <br>
+          <h2>Questions</h2>
+
+          <div class="qstnArea">
+            <button
+              class="qstnBtn"
+              onclick="document.getElementById('id03').style.display='block'"
+            >
+              Ask Question
+            </button>
+      
+            <div id="id03" class="modal">
+              <span
+                onclick="document.getElementById('id03').style.display='none'"
+                class="close"
+                title="Close Modal"
+                >&times;</span
+              >
+              <form class="modal-content" action="/s">
+                <div class="container">
+                  <h1>Upload Question</h1>
+                  <hr />
+                  <p>Subject <input type="text" name="T1" /></p>
+                  <p>Question <textarea name="T2" rows="5" cols="60"></textarea></p>
+                  <br />
+                  <div class="clearfix">
+                    <button
+                      type="button"
+                      onclick="document.getElementById('id03').style.display='none'"
+                      class="cancelbtn"
+                    >
+                      Cancel
+                    </button>
+                    <button type="submit" class="submitBtn">Upload</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="Section">
+          <div class = "votes">
+            <br>
+              <h4>0</h4>
+              votes
+          </div>
+          <div class = "qstnAns">
+            <a href="">How to correctly add and define public key in PKCS 8 format into BuildConfig string value?</a>  
+            <p>I want to use different public keys per build flavor and I want to add it into BuildConfig. But it seems like Gradle has a problem with formatting or using new line characters which are part of Public ...</p>
+          </div>
+        </div>
+        <div class="Section">
+          <div class = "votes">
+            <br>
+              <h4>0</h4>
+              votes
+          </div>
+          <div class = "qstnAns">
+            <a href="">How to correctly add and define public key in PKCS 8 format into BuildConfig string value?</a>  
+            <p>I want to use different public keys per build flavor and I want to add it into BuildConfig. But it seems like Gradle has a problem with formatting or using new line characters which are part of Public ...</p>
+          </div>
+        </div>
+      </div>  
+    </div>
+
+    
+
+    <div class="footer">
+      <br><p>Footer</p>
+    </div>
+
+    <script>
+
+      document.querySelector('.sign').onclick = function(){
+
+        var password = document.querySelector('.password').value,
+            confirmPassword = document.querySelector('.confirmPassword').value;
+
+            if(password == ""){
+              alert("Field cannot be empty.");
+            }
+            else if(password != confirmPassword){
+              alert("Password didn't match try again.");
+            }
+            else if(password == confirmPassword){
+              alert("Password match.")
+            }
+
+      }
+
+
+      // Get the modal
+      var modal = document.getElementById("id01");
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+
+      var modal2 = document.getElementById("id02");
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal2) {
+          modal2.style.display = "none";
+        }
+      };
+
+      var modal3 = document.getElementById("id03");
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal3) {
+          modal3.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
