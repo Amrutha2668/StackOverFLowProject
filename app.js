@@ -17,9 +17,9 @@ app.listen(3007, function () {
 //middleware functions execute during lifecycle of a request to the express server  EG:USE
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req,res) => {
+app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "./templates/main.html"));
-})
+});
 
 // SignUp part
 app.get("/signUp", (req, res) => {
@@ -27,7 +27,9 @@ app.get("/signUp", (req, res) => {
   res.sendFile(path.join(__dirname, "./templates/signUp.html"));
 });
 
+// Variables used to fetch the data.
 let email;
+let questionId;
 
 //if data is submitted we are giving post method then
 app.post("/signUp", function (req, res) {
@@ -55,7 +57,7 @@ app.post("/signUp", function (req, res) {
           Gender: apiResponse.gender,
         });
         console.log("Records Updated!!");
-        res.sendFile(path.join(__dirname, "./templates/login.html"))
+        res.sendFile(path.join(__dirname, "./templates/login.html"));
       } else {
         // res.send("Password don't match");
         res.sendFile(path.join(__dirname, "./templates/signUp.html"));
@@ -111,6 +113,7 @@ app.get("/postQuestion", (req, res) => {
 
 app.post("/postQuestion", function (req, res) {
   apiResponse = req.body;
+  const postedQuestion = apiResponse.T2;
   console.log(apiResponse);
   QuestionModel.create({
     Title: apiResponse.T1,
@@ -118,19 +121,31 @@ app.post("/postQuestion", function (req, res) {
     Email: email,
   });
   console.log("Question Updated!!");
-  // res.send("Question Posted");
+  // res.send(postedQuestion);
+  // Need to send the posted question to the main.html
   res.sendFile(path.join(__dirname, "./templates/main.html"));
 });
 
-createTable();
+// 1. Need to implement html part---> Answer part
+app.get("/postAnswers", (req, res) => {
+  //sending a whole html file to browser
+  res.sendFile(path.join(__dirname, "./templates/main.html"));
+});
 
-// Table creation in db if table does not exists.
-async function createTable() {
-  await sequelize
-    .sync()
-    .then(console.log("Hello"))
-    .catch((err) => console.log(err));
-}
+app.post("/postAnswers", function (req, res) {
+  apiResponse = req.body;
+  const postedAnswer = apiResponse.answer;
+  console.log(apiResponse);
+  QuestionModel.create({
+    QuestionId: questionId,
+    Answer: apiResponse.answer,
+    Email: email,
+  });
+  console.log("Answer Posted!!");
+  // res.send(postedAnswer);
+  // Need to send posted answer to the main.html
+  res.sendFile(path.join(__dirname, "./templates/main.html"));
+});
 
 // about part
 app.get("/about", (req, res) => {
@@ -147,21 +162,58 @@ app.get("/search", (req, res) => {
 app.post("/search", function (req, res) {
   apiResponse = req.body;
   console.log(apiResponse);
-  const searchString = apiResponse.search; 
+  const searchString = apiResponse.search;
   console.log(apiResponse.search);
-  const fetchedResult = fetchQuestionAndAnswer();
-  function fetchQuestionAndAnswer() {
+  data();
+
+  // Fetching the searched Question
+  function fetchQuestion() {
     const result = QuestionModel.findAll({
+      attributes: ["id", "Question"],
       where: {
         ["Question"]: {
-          [Op.like]: `%${searchString}%` ,
+          [Op.like]: `%${searchString}%`,
         },
-     }
-    })
-    console.log(result)
+      },
+    });
     return result;
   }
-  console.log(fetchedResult);
-  // res.send("Question Posted");
-  res.sendFile(path.join(__dirname, "./templates/main.html"));
+
+  // Fetching the answers for the searched question
+  function fetchAnswer(questionId) {
+    const result = AnswersModel.findAll({
+      attributes: ["id", "Answer"],
+      where: {
+        ["id"]: [questionId],
+      },
+    });
+    return result;
+  }
+
+  // 2. need to Implement ----> must to send data and data1 to browser(HomePage)
+  async function data() {
+    const fetchedQuestion = await fetchQuestion();
+    // doubt 1
+    console.log(fetchedQuestion);
+    // questionId = fetchedQuestion['id'];
+    data1(questionId);
+
+    async function data1(questionId) {
+      const fetchedAnswer = await fetchAnswer(questionId);
+      console.log(fetchedAnswer);
+    }
+    console.log(fetchedAnswer);
+    // res.send("Question Posted");
+    res.sendFile(path.join(__dirname, "./templates/main.html"));
+  }
 });
+
+createTable();
+
+// Table creation in db if table does not exists.
+async function createTable() {
+  await sequelize
+    .sync()
+    .then(console.log("Hello"))
+    .catch((err) => console.log(err));
+}
