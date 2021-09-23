@@ -4,7 +4,7 @@ const sequelize = require("../database/database");
 
 const Questions = sequelize.define("Questions", {
     Title : Sequelize.DataTypes.TEXT,
-    Question : Sequelize.DataTypes.CHAR(255),
+    Question : Sequelize.DataTypes.BLOB,
     Email : Sequelize.DataTypes.TEXT,
  });
 

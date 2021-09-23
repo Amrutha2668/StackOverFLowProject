@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hi</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AskInfinite</title>
+    <link href="/static/styleLogin.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>Hello</h1>
+
+    <div id="id02" class="modal">
+      <form class="modal-content" action="/login" method="POST">
+        <div class="container">
+          <h1>Log In</h1>
+          <p>Please fill in this form to open an account.</p>
+          <hr />
+
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required />
+
+          <label for="psw"><b>Password</b></label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="psw"
+            required
+          />
+
+          <hr />
+
+          <button type="submit" class="loginBtn">Log In</button>
+        </div>
+        
+      </form>
+    </div>
+
+  </body>
 </html>
