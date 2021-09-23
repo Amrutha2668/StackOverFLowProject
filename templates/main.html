@@ -11,7 +11,7 @@
   <body>
     <div class="topnav">
       <a class="active" href="#home">Home</a>
-      <a href="/templates/About.html">About</a>
+      <a href="/About">About</a>
 
       <div class="search-container">
         <form action="" method = "post">
@@ -21,22 +21,10 @@
       </div>
 
       <div class="userBtn">
-        <button
-          class="logBtn"
-          onclick="document.getElementById('id02').style.display='block'"
-          style="width: auto"
-        >
-        <a href = "login.html">Log In</a>
-        </button>
-
         
-        <button
-          class="logBtn"
-          onclick="document.getElementById('id01').style.display='block'"
-          style="width: auto"
-        >
-        <a href = "signup.html">Sign Up</a>
-        </button>
+        <a href = "/login">Log In</a>
+
+        <a href = "/signUp">Sign Up</a>
 
       </div>
     </div>
@@ -116,43 +104,6 @@
     </div>
 
     <script>
-
-      document.querySelector('.sign').onclick = function(){
-
-        var password = document.querySelector('.password').value,
-            confirmPassword = document.querySelector('.confirmPassword').value;
-
-            if(password == ""){
-              alert("Field cannot be empty.");
-            }
-            else if(password != confirmPassword){
-              alert("Password didn't match try again.");
-            }
-            else if(password == confirmPassword){
-              alert("Password match.")
-            }
-
-      }
-
-
-      // Get the modal
-      var modal = document.getElementById("id01");
-
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function (event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      };
-
-      var modal2 = document.getElementById("id02");
-
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function (event) {
-        if (event.target == modal2) {
-          modal2.style.display = "none";
-        }
-      };
 
       var modal3 = document.getElementById("id03");
 
