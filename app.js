@@ -126,7 +126,7 @@ app.post("/postQuestion", function (req, res) {
   res.sendFile(path.join(__dirname, "./templates/main.html"));
 });
 
-// Need to implement html part---> Answer part
+// 1. Need to implement html part---> Answer part
 app.get("/postAnswers", (req, res) => {
   //sending a whole html file to browser
   res.sendFile(path.join(__dirname, "./templates/main.html"));
@@ -197,15 +197,15 @@ app.post("/search", function (req, res) {
     console.log(fetchedQuestion);
     // questionId = fetchedQuestion['id'];
     data1(questionId);
-  }
 
-  async function data1(questionId) {
-    const fetchedAnswer = await fetchAnswer(questionId);
+    async function data1(questionId) {
+      const fetchedAnswer = await fetchAnswer(questionId);
+      console.log(fetchedAnswer);
+    }
     console.log(fetchedAnswer);
+    // res.send("Question Posted");
+    res.sendFile(path.join(__dirname, "./templates/main.html"));
   }
-  console.log(fetchedAnswer);
-  // res.send("Question Posted");
-  res.sendFile(path.join(__dirname, "./templates/main.html"));
 });
 
 createTable();
