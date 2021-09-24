@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  * {
+    box-sizing: border-box;
+  }
+
+  .header {
+      width: 100%;
+      height: 50px;
+      background-color: black;
+  }
+
+  .Section {
+    width:100%;
+    height: 160px;
+    display: flex;
+  }
+  
+  .Section .votes {
+    width:10%;
+    height: 150px;
+    background-color: wheat;
+    text-align: center;
+    padding-top: 40px;
+    font-size: large;
+    font-style: bold;
+  }
+  
+  .Section .qstnAns {
+    width: 90%;
+    height: 150px;
+    padding-left: 15px;
+    padding-top: 15px;
+    background-color: white;
+  }
+  
+  .Section .qstnAns a {
+    text-decoration: none;
+    color: rgb(55, 55, 224);
+  }
+
+  .qstnDetail {
+      width: 100%;
+      height: auto;
+  }
+
+  .askedBy {
+      width: 100%;
+      height: 50px;
+      background-color: rgb(138, 138, 180);
+  }
+
+  .answer{
+      width: 100%;
+      height: 50px;
+      border: 1px solid;
+      border-left: none;
+      border-right: none;
+      background-color: lightgrey;
+  }
+
+  .ansArea{
+      display: flex;
+  }
+  .ansArea .votes {
+    width:10%;
+    height: auto;
+    background-color: gainsboro;
+    text-align: center;
+    padding-top: 40px;
+    font-size: large;
+    font-style: bold;
+  }
+  .ansArea .showAns {
+    width: 90%;
+    height: auto;
+    padding-left: 15px;
+    padding-top: 15px;
+    background-color: white;
+  }
+  .answeredBy{
+    width: 100%;
+    height: 50px;
+    background-color: whitesmoke;
+  }
+
+  .fillAns{
+      width: 100%;
+      padding:10px;
+      height: auto;
+      border: 1px solid;
+  }
+
+  .fillAns .yrAns{
+      width: 100%;
+      height: 50px;
+      background-color: rgb(243, 229, 229);
+      border: 1px solid;
+      border-left: none;
+      border-right: none;
+      border-color: rgb(187, 183, 183);
+  }
+
+  .fillAns textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+  }
+
+  .fillAns .postAns{
+    width: 120px;
+    height: 45px;
+    background-color: rgb(56, 56, 204);
+    padding: auto;
+    border: none;
+  }
+  

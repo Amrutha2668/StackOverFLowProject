@@ -80,7 +80,7 @@ body {
 
 .topQuestions {
   width:100%;
-  height: 750pxpx;
+  height: auto;
   background-color: white;
   opacity: 0.9;
 }
@@ -88,7 +88,7 @@ body {
 .topQuestions .showQstn {
   width:75%;
   margin: 0 auto;
-  height: 750px;
+  height: auto;
   background-color: white;
 }
 

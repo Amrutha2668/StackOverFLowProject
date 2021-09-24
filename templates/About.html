@@ -1,50 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AskInfinite</title>
-    <link href="/static/styleAbout.css" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AskInfinite</title>
+  <link href="/static/styleAbout.css" rel="stylesheet" />
 </head>
+
 <body>
-    <h1>Hello</h1>
+    <!--<h1>AskInfinite</h1>
+    <hr>-->
     <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')">About</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Leadership</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Research</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Contact Us</button>
-</div>
+      <button class="tablinks" onclick="openCity(event, 'London')">
+        About
+      </button>
+      <button class="tablinks" onclick="openCity(event, 'Paris')">
+        Leadership
+      </button>
+      <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+        Research
+      </button>
+      <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+        Contact Us
+      </button>
+    </div>
+    <div id="London" class="tabcontent">
+      <div class="about-section">
+        <div class="inner-container">
+          Who we are
+          <h2>
+            Empowering the world to develop technology through collective knowledge.
+          </h2>
+          Our public platform serves 100 million people every month, making it one of the 50 most popular websites in
+          the
+          world.<br>
+          Our asynchronous knowledge management and collaboration offering Stack Overflow for Teams, is transforming how
+          people work.
+        </div>
+      </div>
+    </div>
 
-<div id="London" class="tabcontent">
-  <h3>London</h3>
-  <p>London is the capital city of England.</p>
-</div>
+    <div id="Paris" class="tabcontent">
+      <div class = "leader-section">
+        <div class="inner-container">
+          AskInfinite Leadership Team
+        </div>
+      </div>
+    </div>
 
-<div id="Paris" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p> 
-</div>
+    <div id="Tokyo" class="tabcontent">
+      <h3>Tokyo</h3>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
 
-<div id="Tokyo" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
 
-<script>
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-</script>
+    <div class="footer">
+      <br>
+      <div class="box">
+        <br>
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AskInfinite</h3>
+        <ul style="list-style-type:none;">
+          <li>Questions</li><br>
+          <li>Jobs</li><br>
+          <li>Developer Jobs Directory</li><br>
+          <li>Help</li><br>
+          <li>Mobile</li><br>
+        </ul>
+      </div>
+      <div class="box">
+        <br>
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Products</h3>
+        <ul style="list-style-type:none;">
+          <li>Teams</li><br>
+          <li>Talent</li><br>
+          <li>Advertising</li><br>
+          <li>Enterprise</li><br>
+        </ul>
+      </div>
+      <div class="box">
+        <br>
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Company</h3>
+        <ul style="list-style-type:none;">
+          <li>About</li><br>
+          <li>Privacy Policy</li><br>
+          <li>Terms of Service</li><br>
+          <li>Contact Us</li><br>
+          <li>Cookie Settings</li><br>
+        </ul>
+      </div>
+      <div class="box">
+        <br>
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Networks</h3>
+        <ul style="list-style-type:none;">
+          <li>Technology</li><br>
+          <li>Life/Arts</li><br>
+          <li>Science</li><br>
+          <li>Other</li><br>
+          <li>&#169;2021 stack exchange</li><br>
+        </ul>
+      </div>
+    </div>
+  
+  <script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
 </body>
+
 </html>

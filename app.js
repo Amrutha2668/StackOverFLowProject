@@ -106,12 +106,12 @@ app.post("/login", function (req, res) {
 });
 
 // Question part
-app.get("/postQuestion", (req, res) => {
+app.get("/question", (req, res) => {
   //sending a whole html file to browser
   res.sendFile(path.join(__dirname, "./templates/question.html"));
 });
 
-app.post("/postQuestion", function (req, res) {
+app.post("/question", function (req, res) {
   apiResponse = req.body;
   const postedQuestion = apiResponse.T2;
   console.log(apiResponse);
@@ -127,24 +127,24 @@ app.post("/postQuestion", function (req, res) {
 });
 
 // 1. Need to implement html part---> Answer part
-app.get("/postAnswers", (req, res) => {
+app.get("/QnA", (req, res) => {
   //sending a whole html file to browser
-  res.sendFile(path.join(__dirname, "./templates/main.html"));
+  res.sendFile(path.join(__dirname, "./templates/QnA.html"));
 });
 
-app.post("/postAnswers", function (req, res) {
+app.post("/QnA", function (req, res) {
   apiResponse = req.body;
   const postedAnswer = apiResponse.answer;
   console.log(apiResponse);
-  QuestionModel.create({
-    QuestionId: questionId,
-    Answer: apiResponse.answer,
+  AnswersModel.create({
+    QuestionId: 1,
+    Answer: apiResponse.T2,
     Email: email,
   });
   console.log("Answer Posted!!");
   // res.send(postedAnswer);
   // Need to send posted answer to the main.html
-  res.sendFile(path.join(__dirname, "./templates/main.html"));
+  res.sendFile(path.join(__dirname, "./templates/QnA.html"));
 });
 
 // about part
