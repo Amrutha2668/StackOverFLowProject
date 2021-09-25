@@ -1,73 +1,72 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
-<link href="profile.css" rel ="stylesheet" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Untitled Document</title>
+  <link href="/static/profile.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="/static/bootstrap.css" />
+  <script type="text/javascript" src="/static/bootstrap.js"></script>
+
+  <script type="text/javascript" src="/static/jquery.js"></script>
+  <script>
+    $(document).ready(function (e) {
+      $("#b1").click(function (e) {
+        $(".dropdown-menu").toggle();
+      });
+    });
+  </script>
 </head>
 
 <body>
-
-
-<!DOCTYPE html>
-<!-- Created By CodingNepal - www.codingnepalweb.com -->
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!------<title> Website Layout | CodingLab</title>------>
-     <link rel="stylesheet" type="text/css" href="bootstrap.css" />
-    <script type="text/javascript" src="bootstrap.js"></script>
-
-    <script type="text/javascript" src="jquery.js"></script>
-    <script>
-      $(document).ready(function (e) {
-        $("#b1").click(function (e) {
-          $(".dropdown-menu").toggle();
-        });
-      });
-    </script>
-    <link rel="stylesheet" href="homepage.css">
-   </head>
-<body>
-<body>
-<nav>
+  <nav>
     <div class="menu">
-             <div class="logo">
+      <div class="logo">
         <a href="#">Profile</a>
-           </div>
-      <ul>
-        
-       
-        <div class="dropdown">
-      <button class="dropdown-toggle btn btn-primary" id="b1">Menu</button>
-      <div class="dropdown-menu">
-        <a href="#" class="dropdown-item">Home</a>
-        <a href="#" class="dropdown-item">About</a>
-        <a href="#" class="dropdown-item">Profile</a>
-        <a href="#" class="dropdown-item">Users</a>
-        <a href="#" class="dropdown-item">Login</a>
-        <a href="#" class="dropdown-item">Signup</a>
       </div>
-    </div>
+      <ul>
+
+
+        <div class="dropdown">
+          <button class="dropdown-toggle btn btn-primary" id="b1">Menu</button>
+          <div class="dropdown-menu">
+            <a href="/userMain" class="dropdown-item">Home</a>
+            <a href="/About" class="dropdown-item">About</a>
+            <a href="/profile" class="dropdown-item">Profile</a>
+            <a href="/user" class="dropdown-item">Users</a>
+            <a href="#" class="dropdown-item">Login</a>
+            <a href="#" class="dropdown-item">Signup</a>
+          </div>
+        </div>
       </ul>
     </div>
   </nav>
-  
-  <h2 style="text-align:center">User Profile Card</h2>
+  <div class="middle">
+    <h2 style="text-align:center">User Profile Card</h2>
 
-<div class="card">
-  <img src="photo1.png"  style="width:100">
-  <h1>Neelanshi</h1>
-  <p class="title">email@gmail.com</p>
-  <p></p>
-  <div style="margin: 24px 0;">
-    <a href="#"><i class="fa fa-dribbble"> Question Ask-0</i></a> <br>
-    <a href="#"><i class="fa fa-twitter">Question Solve-0</i></a>  
-    <a href="#"><i class="fa fa-linkedin"></i></a>  
-    <a href="#"><i class="fa fa-facebook"></i></a> 
+    <div class="card">
+      <img src="/static/photo1.png" style="width:100px">
+      <h1>NeelVarsAmruArch</h1>
+      <p class="title">email@gmail.com</p>
+      <p class="title">Kota,Rajasthan</p>
+      <p></p>
+      <div style="margin: 24px 0;" class="fine">
+
+        <a href="#"> Question Ask-0</i></a> <br>
+        <a href="#">Question Solve-0</i></a> <br>
+        <a href="#">Reputation 0</i></a> <br>
+        <a href="#"></i></a>
+
+      </div>
+
+      <p><button>Profile</button></p>
+
+    </div>
+
   </div>
-  <p><button>Contact</button></p>
-</div>
+
+
 </body>
+
 </html>

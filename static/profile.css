@@ -1,15 +1,14 @@
-#main
-{
-	 margin:0 auto;
-	 height:auto;
-	 width:100%;
+#main {
+  margin: 0 auto;
+  height: auto;
+  width: 100%;
 }
-#wrapper
-{
-	float:left;
-	height:auto;
-	width:100%;
-	border:1px solid #000;
+
+#wrapper {
+  float: left;
+  height: auto;
+  width: 100%;
+  border: 1px solid #000;
 
 }
 
@@ -47,6 +46,7 @@
   width: 1000px;
   margin-left: 100px;
 }
+
 .topnav .search-container input[type="text"] {
   padding: 6px;
   margin-top: 8px;
@@ -67,6 +67,7 @@
 .topnav .search-container button:hover {
   background: #ccc;
 }
+
 /* Full-width input fields */
 .topnav .userBtn {
   margin-left: 100px;
@@ -83,33 +84,43 @@
 
 
 
-#title
-{
-	color:#FFF;
-	text-align:center;
-	font-size:60px;
-	text-shadow:4px 4px 2px #000000;
+#title {
+  color: #FFF;
+  text-align: center;
+  font-size: 60px;
+  text-shadow: 4px 4px 2px #000000;
 
 }
-#menu
-{
-	float:left;
-	height:50px;
-	width:100%;
-	border:1px solid #000;
-	background:#096;
+
+#menu {
+  float: left;
+  height: 50px;
+  width: 100%;
+  border: 1px solid #000;
+  background: #096;
 }
+
 .card {
-	padding:100px;
+  margin-top: 100px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 600px;
-  margin-top: 50px;
+  max-width: 100x;
+  max-height: 800px;
+  padding: 50px;
+  margin-left: 200px;
+  margin-right: 200px;
   text-align: center;
 }
 
 .title {
   color: grey;
-  font-size: 15px;
+  font-size: 18px;
+}
+
+.middle {
+
+  height: 800px;
+  width: 100%;
+  background-color: #999;
 }
 
 button {
@@ -131,6 +142,39 @@ a {
   color: black;
 }
 
-button:hover, a:hover {
+button:hover,
+a:hover {
   opacity: 0.7;
+}
+
+.container-5 {
+  padding: 60px;
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  margin-bottom: 10px;
+  background-color: #F00;
+}
+
+.container-5 div .box-51 {
+  background-color: #0FC;
+  border: 1px solid #ccc;
+  padding: 10px;
+  height: 100px;
+}
+
+.fine {
+  height: 100px;
+  width: 100%;
+  alignment-adjust: middle;
+  background-color: #FC9;
+}
+
+
+
+.box-51:hover,
+.box-52:hover {
+  display: block;
+  background: #FFF;
+  color: #06F;
 }
