@@ -13,13 +13,13 @@ body {
 
   .Section {
     width:100%;
-    height: 160px;
+    height: auto;
     display: flex;
   }
   
   .Section .votes {
     width:10%;
-    height: 150px;
+    height: auto;
     background-color: wheat;
     text-align: center;
     padding-top: 40px;
@@ -29,7 +29,7 @@ body {
   
   .Section .qstnAns {
     width: 90%;
-    height: 150px;
+    height: auto;
     padding-left: 15px;
     padding-top: 15px;
     background-color: white;
@@ -41,14 +41,19 @@ body {
   }
 
   .qstnDetail {
-      width: 100%;
+      width: 90%;
       height: auto;
+      padding: 20px;
+      background-color: whitesmoke;
+      margin: auto;
+      border-radius: 10px;
   }
 
   .askedBy {
       width: 100%;
       height: 50px;
-      background-color: rgb(138, 138, 180);
+      background-color: wheat;
+      padding: 10px;
   }
 
   .answer{
@@ -66,7 +71,7 @@ body {
   .ansArea .votes {
     width:10%;
     height: auto;
-    background-color: gainsboro;
+    background-color: wheat;
     text-align: center;
     padding-top: 40px;
     font-size: large;
@@ -86,7 +91,8 @@ body {
   }
 
   .fillAns{
-      width: 100%;
+      width: 90%;
+      margin: auto;
       padding:10px;
       height: auto;
       border: 1px solid;
@@ -95,7 +101,8 @@ body {
   .fillAns .yrAns{
       width: 100%;
       height: 50px;
-      background-color: rgb(243, 229, 229);
+      margin: auto;
+      background-color: wheat;
       border: 1px solid;
       border-left: none;
       border-right: none;
@@ -122,7 +129,7 @@ body {
     border: none;
   }
   
-  .Section .votes .IncDec  {
+  /*.Section .votes .IncDec  {
     width: 300px;
     margin: 0 auto;
     text-align: center;
@@ -180,4 +187,4 @@ body {
   .Section .votes .IncDec input[type=number]::-webkit-outer-spin-button {
       -webkit-appearance: none;
       margin: 0;
-  }
+  }*/

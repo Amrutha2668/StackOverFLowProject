@@ -21,6 +21,11 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "./templates/main.html"));
 });
 
+app.get("/profile", (req, res) => {
+  //sending a whole html file to browser
+  res.sendFile(path.join(__dirname, "./templates/profile.html"));
+});
+
 // SignUp part
 app.get("/signUp", (req, res) => {
   //sending a whole html file to browser
@@ -105,6 +110,7 @@ app.post("/login", function (req, res) {
   }
 });
 
+
 // Question part
 app.get("/question", (req, res) => {
   //sending a whole html file to browser
@@ -127,12 +133,12 @@ app.post("/question", function (req, res) {
 });
 
 // 1. Need to implement html part---> Answer part
-app.get("/QnA", (req, res) => {
+app.get("/questionAnswer", (req, res) => {
   //sending a whole html file to browser
-  res.sendFile(path.join(__dirname, "./templates/QnA.html"));
+  res.sendFile(path.join(__dirname, "./templates/questionAnswer.html"));
 });
 
-app.post("/QnA", function (req, res) {
+app.post("/questionAnswer", function (req, res) {
   apiResponse = req.body;
   const postedAnswer = apiResponse.answer;
   console.log(apiResponse);
@@ -144,7 +150,7 @@ app.post("/QnA", function (req, res) {
   console.log("Answer Posted!!");
   // res.send(postedAnswer);
   // Need to send posted answer to the main.html
-  res.sendFile(path.join(__dirname, "./templates/QnA.html"));
+  res.sendFile(path.join(__dirname, "./templates/questionAnswer.html"));
 });
 
 // about part
