@@ -1,0 +1,177 @@
+#main
+{
+	 margin:0 auto;
+	 height:auto;
+	 width:100%;
+}
+#wrapper
+{
+	float:left;
+	height:auto;
+	width:100%;
+	border:1px solid #000;
+
+}
+
+.topnav {
+  display: flex;
+  overflow: hidden;
+  background-color: #4f4f52;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: black;
+  color: white;
+}
+
+.topnav a.active {
+  background-color: #151616;
+  color: white;
+}
+
+.topnav a .active:hover {
+  background-color: rgb(87, 69, 69);
+}
+
+.topnav .search-container {
+  width: 1000px;
+  margin-left: 100px;
+}
+.topnav .search-container input[type="text"] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+/* Full-width input fields */
+.topnav .userBtn {
+  margin-left: 100px;
+  width: 300px;
+  display: flex;
+}
+
+/*.topnav .userBtn .logBtn{
+    background-color: rgb(48, 45, 45);
+    color: #fff; 
+    height: 50px;
+    width: 50px
+}*/
+
+
+
+#title
+{
+	color:#FFF;
+	text-align:center;
+	font-size:60px;
+	text-shadow:4px 4px 2px #000000;
+
+}
+#menu
+{
+	float:left;
+	height:50px;
+	width:100%;
+	border:1px solid #000;
+	background:#096;
+}
+
+.middle
+{
+	 
+	height:100%;
+	width:100%;
+	border:1px solid #000;
+	overflow-y:scroll;
+
+}
+
+
+.container-3 {
+   
+    display:flex;
+    margin-top: 10px;
+    margin-bottom:150px;
+	margin-left:250px;
+	margin-right:250px;}
+
+    
+.box-31 {
+   flex:1;
+	height:250px;
+	width:250px;
+	
+}
+
+.box-32 {
+	 flex:1;
+    height:250px;
+	width:250px;
+}
+
+.box-33 {
+	 flex:1;
+    height:250px;
+	width:250px;
+}
+.box-34 {
+	 flex:1;
+    height:250px;
+	width:250px;
+}
+/*
+.box-31:hover, .box-32:hover, .box-33:hover, .box-34:hover {
+        display: block;
+        background: #F96;
+        color: #000;
+    }
+
+*/
+
+/*#content1
+{
+
+	float:left;
+	height:500px;
+	width:100%;
+	border:1px solid #000;
+
+}*/
+
+#footer
+{
+
+	float:left;
+	height:40px;
+	width:100%;
+	border:1px solid #000;
+	background:#000;
+	color:#FFF;
+	text-align:center;
+	letter-spacing:10px;
+    margin-bottom:0px;
+}
