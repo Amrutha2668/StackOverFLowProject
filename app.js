@@ -95,7 +95,7 @@ app.post("/login", function (req, res) {
 
     // if count is 1 then login successful
     if (count2 == 1) {
-      res.sendFile(path.join(__dirname, "./templates/main.html"));
+      res.sendFile(path.join(__dirname, "./templates/userMain.html"));
       // res.send("hey user successfully logged in");
     }
     // If not redirect them to login page again!

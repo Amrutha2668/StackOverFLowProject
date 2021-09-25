@@ -1,51 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="/static/styleQnA.css" rel="stylesheet" />
-</head>
-<body>
-    <div class = "header">
-        Hello
-    </div>
+  </head>
+  <body>
+    <div class="header">Hello</div>
     <div class="Section">
-        <div class="votes"> 0<br>votes</div>
-        <div class="qstnAns">
-          <a>What do you understand by Java virtual machine?</a>
-        </div>
+      <div class="votes">
+        <form class="IncDec">
+          <div
+            class="value-button"
+            id="decrease"
+            onclick="decreaseValue()"
+            value="Decrease Value"
+          >
+            -
+          </div>
+          <input type="number" id="number" value="0" />
+          <div
+            class="value-button"
+            id="increase"
+            onclick="increaseValue()"
+            value="Increase Value"
+          >
+            +
+          </div>
+        </form>
+      </div>
+      <div class="qstnAns">
+        <a>What do you understand by Java virtual machine?</a>
+      </div>
     </div>
 
     <div class="qstnDetail">
-    <p>Please, help with a problem, thank you.</p>
-    <p>The issue I am fighting with is to take list of objects from DB and be able to use them in thymeleaf template via loop to show them (each time different quantity) on front-page to client.</p>
-    <p>I suppose I do not have problems with controller and with a loop in my htnl file. I think I have a struggle with calling method from controller and taking later a list of the objects as a result of this called method execution. Maybe problem somewhere in section of teg a on the beginning of code from html file.</p>
-    <p>Also I want to add that in the same html I use the pardData without problems, but in this place it is null.
-    </p>
+      <p>Please, help with a problem, thank you.</p>
+      <p>
+        The issue I am fighting with is to take list of objects from DB and be
+        able to use them in thymeleaf template via loop to show them (each time
+        different quantity) on front-page to client.
+      </p>
+      <p>
+        I suppose I do not have problems with controller and with a loop in my
+        htnl file. I think I have a struggle with calling method from controller
+        and taking later a list of the objects as a result of this called method
+        execution. Maybe problem somewhere in section of teg a on the beginning
+        of code from html file.
+      </p>
+      <p>
+        Also I want to add that in the same html I use the pardData without
+        problems, but in this place it is null.
+      </p>
     </div>
 
     <div class="askedBy"></div>
-    <br>
+    <br />
     <div class="answer">1 Answer</div>
     <div class="ansArea">
-        <div class="votes"> 0<br>votes</div>
-        <div class="showAns">
-          <p>Java Virtual Machine is a virtual machine that enables the computer to run the Java program.
-            JVM acts like a run-time engine which calls the main method present in the Java code. 
-            JVM is the specification which must be implemented in the computer system.</p>  
-        </div>
+      <div class="votes">0<br />votes</div>
+      <div class="showAns">
+        <p>
+          Java Virtual Machine is a virtual machine that enables the computer to
+          run the Java program. JVM acts like a run-time engine which calls the
+          main method present in the Java code. JVM is the specification which
+          must be implemented in the computer system.
+        </p>
+      </div>
     </div>
     <div class="answeredBy"></div>
-    <br>
+    <br />
 
     <div class="fillAns">
-        <div class="yrAns">Your Answer</div> 
-        <form action="/QnA" method="post">
-        <p>Body </p> <textarea name="T2" rows="5" cols="60"></textarea>
+      <div class="yrAns">Your Answer</div>
+      <form action="/QnA" method="post">
+        <p>Body</p>
+        <textarea name="T2" rows="5" cols="60"></textarea>
         <button class="postAns">Post Answer</button>
-        </form>
+      </form>
     </div>
-</body>
+
+    <script>
+      function increaseValue() {
+        var value = parseInt(document.getElementById("number").value, 10);
+        value = isNaN(value) ? 0 : value;
+        value++;
+        document.getElementById("number").value = value;
+      }
+
+      function decreaseValue() {
+        var value = parseInt(document.getElementById("number").value, 10);
+        value = isNaN(value) ? 0 : value;
+        value < 1 ? (value = 1) : "";
+        value--;
+        document.getElementById("number").value = value;
+      }
+    </script>
+  </body>
 </html>

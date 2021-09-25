@@ -66,6 +66,18 @@ body {
   display: flex;
 }
 
+.topnav .userProfile a {
+  float: right;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav .userProfile a:hover{
+  background-color: none;
+}
+
 /*.topnav .userBtn .logBtn{
     background-color: rgb(48, 45, 45);
     color: #fff; 
@@ -177,6 +189,8 @@ body {
   font-size: small;
   color: lightgray;
 }
+
+
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
   .topnav .modal .cancelbtn,
